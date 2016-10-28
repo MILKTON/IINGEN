@@ -1,0 +1,6 @@
+C:\Users\Milton\MPLABXProjects\comunicacionSerial_test.X\main.c:44:1:  Warning#203  Condition always TRUE
+C:\Users\Milton\MPLABXProjects\comunicacionSerial_test.X\main.c:22:10:  Warning#202  Variable never used:   ch
+C:\Users\Milton\MPLABXProjects\comunicacionSerial_test.X\main.c:23:10:  Warning#202  Variable never used:   string
+      Memory usage:   ROM=3%      RAM=5% - 5%
+      0 Errors,  3 Warnings.
+Build Successful.

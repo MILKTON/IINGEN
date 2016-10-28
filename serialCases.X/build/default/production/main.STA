@@ -1,0 +1,49 @@
+
+ROM used:   348/16384 (1%)
+            348/16384 (1%) including unused fragments
+
+            0.4 Average locations per line
+            9.4 Average locations per statement
+
+RAM used:   23/1536 (1%) at main() level
+            28/1536 (2%) worst case
+
+Stack used: 1 worst case (0 in main + 1 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   57    37 100  main.c
+  762     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18f2520.h
+----- -----
+  819    37 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0      8   1    0             @PUTCHARI_BIU_1
+0     22   3    0             @GETCH_BIU_1
+0    118  17    5   747  3.4  isr_rs232
+0     54   8    0    70  1.6  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              37
+    Comments                146
+    Volume (V)              909
+    Difficulty (D)          5.0
+    Effort to implement (E) 4543
+    Time to implement (T)   4 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   8
+    Maintainability (MI)    122
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-00094   142  0  
+00096-07FFE   202  32416  
+
+
+

@@ -1,0 +1,91 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005     main.value
+006     main.ch
+007-046 main.string
+047     @PRINTF_D_57600_31766_31767.P1
+047     @PRINTF_X_57600_31766_31767.P2
+047     @PSTRINGCN_57600_31766_31767.P3
+047     @PSTRINGC_1.@SCRATCH1
+048     @PRINTF_D_57600_31766_31767.P1
+048     @PRINTF_X_57600_31766_31767.P2
+048     @PSTRINGC_1.@SCRATCH2
+048     @PSTRINGCN_57600_31766_31767.@SCRATCH1
+049     @PSTRINGCN_57600_31766_31767.@SCRATCH2
+049     @PRINTF_D_57600_31766_31767.@SCRATCH1
+04A     @PRINTF_D_57600_31766_31767.@SCRATCH2
+04B     @PRINTF_D_57600_31766_31767.@SCRATCH3
+04C     @PRINTF_D_57600_31766_31767.@SCRATCH4
+04D     @DIV88.P1
+04E     @DIV88.P1
+04F     @DIV88.@SCRATCH1
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const631.call
+000028  @const633.call
+00004C  @const634.call
+000070  @const635.call
+00008E  @const644.call
+0000A8  @const648.call
+0000E2  @PSTRINGC_1
+000104  @PUTCHARI_BIU_1
+00010C  @PSTRINGCN_57600_31766_31767
+00012C  @DIV88
+000154  @PRINTF_D_57600_31766_31767
+000208  @PRINTF_X_57600_31766_31767
+00024C  main
+00024C  @cinit1
+000272  @cinit2
+
+Project Directory:
+    C:\Users\Milton\MPLABXProjects\comandos.X\
+
+Project Files:
+    main.c                                                  [21-oct-16 15:09  CRC=C1E1BD45]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F2520.h  [28-may-13 12:10  CRC=5C326614]
+
+Source signature=7A46896D
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2520
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __18F2520 1
+
+Output Files:
+    XREF file:   build\default\production\main.xsym
+    Errors:      build\default\production\main.err
+    Ext Symbols: build\default\production\main.esym
+    INHX32:      build\default\production\main.hex
+    Symbols:     build\default\production\main.sym
+    List:        build\default\production\main.lst
+    Debug/COFF:  build\default\production\main.cof
+    Project:     main.ccspjt
+    Call Tree:   build\default\production\main.tre
+    Statistics:  build\default\production\main.STA

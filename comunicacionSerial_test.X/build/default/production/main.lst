@@ -1,0 +1,571 @@
+CCS PCH C Compiler, Version 5.005, 10097               21-oct-16 14:30
+
+               Filename:   C:\Users\Milton\MPLABXProjects\comunicacionSerial_test.X\build\default\production\main.lst
+
+               ROM used:   1020 bytes (3%)
+                           Largest free fragment is 31748
+               RAM used:   70 (5%) at main() level
+                           79 (5%) worst case
+               Stack used: 0 locations
+               Stack size: 31
+
+*
+0000:  GOTO   02B8
+.................... /*****************************************************************************/ 
+.................... /* RS232 communication demo wiht CCS C compiler                              */ 
+.................... /*****************************************************************************/ 
+....................  
+.................... #include <18F2520.h> 
+.................... //////// Standard Header file for the PIC18F2520 device //////////////// 
+.................... #device PIC18F2520 
+0004:  DATA 2A,2A
+0006:  DATA 2A,2A
+0008:  DATA 2A,2A
+000A:  DATA 2A,2A
+000C:  DATA 2A,2A
+000E:  DATA 2A,2A
+0010:  DATA 2A,2A
+0012:  DATA 2A,2A
+0014:  DATA 2A,2A
+0016:  DATA 2A,2A
+0018:  DATA 2A,2A
+001A:  DATA 2A,2A
+001C:  DATA 2A,2A
+001E:  DATA 2A,2A
+0020:  DATA 2A,2A
+0022:  DATA 2A,2A
+0024:  DATA 2A,2A
+0026:  DATA 00,00
+0028:  DATA 20,20
+002A:  DATA 52,53
+002C:  DATA 32,33
+002E:  DATA 32,20
+0030:  DATA 64,65
+0032:  DATA 6D,6F
+0034:  DATA 20,77
+0036:  DATA 69,74
+0038:  DATA 68,20
+003A:  DATA 43,43
+003C:  DATA 53,20
+003E:  DATA 43,20
+0040:  DATA 63,6F
+0042:  DATA 6D,70
+0044:  DATA 69,6C
+0046:  DATA 65,72
+0048:  DATA 20,20
+004A:  DATA 00,00
+004C:  DATA 2A,2A
+004E:  DATA 2A,2A
+0050:  DATA 2A,2A
+0052:  DATA 2A,2A
+0054:  DATA 2A,2A
+0056:  DATA 2A,2A
+0058:  DATA 2A,2A
+005A:  DATA 2A,2A
+005C:  DATA 2A,2A
+005E:  DATA 2A,2A
+0060:  DATA 2A,2A
+0062:  DATA 2A,2A
+0064:  DATA 2A,2A
+0066:  DATA 2A,2A
+0068:  DATA 2A,2A
+006A:  DATA 2A,2A
+006C:  DATA 2A,2A
+006E:  DATA 00,00
+0070:  DATA 44,65
+0072:  DATA 63,69
+0074:  DATA 6D,61
+0076:  DATA 6C,20
+0078:  DATA 76,61
+007A:  DATA 72,69
+007C:  DATA 61,62
+007E:  DATA 6C,65
+0080:  DATA 20,6F
+0082:  DATA 75,74
+0084:  DATA 70,75
+0086:  DATA 74,3A
+0088:  DATA 20,25
+008A:  DATA 64,0A
+008C:  DATA 0D,00
+008E:  DATA 48,65
+0090:  DATA 78,20
+0092:  DATA 76,61
+0094:  DATA 72,69
+0096:  DATA 61,62
+0098:  DATA 6C,65
+009A:  DATA 20,6F
+009C:  DATA 75,74
+009E:  DATA 70,75
+00A0:  DATA 74,3A
+00A2:  DATA 20,25
+00A4:  DATA 78,0A
+00A6:  DATA 0D,00
+00A8:  DATA 54,79
+00AA:  DATA 70,65
+00AC:  DATA 20,6F
+00AE:  DATA 6E,20
+00B0:  DATA 74,68
+00B2:  DATA 65,20
+00B4:  DATA 6B,65
+00B6:  DATA 79,62
+00B8:  DATA 6F,61
+00BA:  DATA 72,64
+00BC:  DATA 2C,20
+00BE:  DATA 50,49
+00C0:  DATA 43,20
+00C2:  DATA 77,69
+00C4:  DATA 6C,6C
+00C6:  DATA 20,65
+00C8:  DATA 63,68
+00CA:  DATA 6F,20
+00CC:  DATA 62,61
+00CE:  DATA 63,6B
+00D0:  DATA 20,74
+00D2:  DATA 68,65
+00D4:  DATA 20,63
+00D6:  DATA 68,61
+00D8:  DATA 72,61
+00DA:  DATA 63,74
+00DC:  DATA 65,72
+00DE:  DATA 73,3A
+00E0:  DATA 00,00
+00E2:  DATA 2A,2A
+00E4:  DATA 2A,2A
+00E6:  DATA 2A,2A
+00E8:  DATA 2A,2A
+00EA:  DATA 2A,2A
+00EC:  DATA 2A,2A
+00EE:  DATA 2A,2A
+00F0:  DATA 2A,2A
+00F2:  DATA 2A,2A
+00F4:  DATA 2A,2A
+00F6:  DATA 2A,2A
+00F8:  DATA 2A,2A
+00FA:  DATA 2A,2A
+00FC:  DATA 2A,2A
+00FE:  DATA 2A,2A
+0100:  DATA 2A,2A
+0102:  DATA 2A,2A
+0104:  DATA 00,00
+0106:  DATA 20,20
+0108:  DATA 52,53
+010A:  DATA 32,33
+010C:  DATA 32,20
+010E:  DATA 64,65
+0110:  DATA 6D,6F
+0112:  DATA 20,77
+0114:  DATA 69,74
+0116:  DATA 68,20
+0118:  DATA 43,43
+011A:  DATA 53,20
+011C:  DATA 43,20
+011E:  DATA 63,6F
+0120:  DATA 6D,70
+0122:  DATA 69,6C
+0124:  DATA 65,72
+0126:  DATA 20,20
+0128:  DATA 00,00
+012A:  DATA 2A,2A
+012C:  DATA 2A,2A
+012E:  DATA 2A,2A
+0130:  DATA 2A,2A
+0132:  DATA 2A,2A
+0134:  DATA 2A,2A
+0136:  DATA 2A,2A
+0138:  DATA 2A,2A
+013A:  DATA 2A,2A
+013C:  DATA 2A,2A
+013E:  DATA 2A,2A
+0140:  DATA 2A,2A
+0142:  DATA 2A,2A
+0144:  DATA 2A,2A
+0146:  DATA 2A,2A
+0148:  DATA 2A,2A
+014A:  DATA 2A,2A
+014C:  DATA 00,00
+014E:  TBLRD*+
+0150:  MOVF   FF5,F
+0152:  BZ    016E
+0154:  MOVFF  FF6,47
+0158:  MOVFF  FF7,48
+015C:  MOVF   FF5,W
+015E:  BTFSS  F9E.4
+0160:  BRA    015E
+0162:  MOVWF  FAD
+0164:  MOVFF  47,FF6
+0168:  MOVFF  48,FF7
+016C:  BRA    014E
+016E:  RETURN 0
+*
+0178:  TBLRD*+
+017A:  MOVFF  FF6,48
+017E:  MOVFF  FF7,49
+0182:  MOVF   FF5,W
+0184:  BTFSS  F9E.4
+0186:  BRA    0184
+0188:  MOVWF  FAD
+018A:  MOVFF  48,FF6
+018E:  MOVFF  49,FF7
+0192:  DECFSZ 47,F
+0194:  BRA    0178
+0196:  RETURN 0
+0198:  MOVF   4E,W
+019A:  CLRF   01
+019C:  SUBWF  4D,W
+019E:  BC    01A6
+01A0:  MOVFF  4D,00
+01A4:  BRA    01BE
+01A6:  CLRF   00
+01A8:  MOVLW  08
+01AA:  MOVWF  4F
+01AC:  RLCF   4D,F
+01AE:  RLCF   00,F
+01B0:  MOVF   4E,W
+01B2:  SUBWF  00,W
+01B4:  BTFSC  FD8.0
+01B6:  MOVWF  00
+01B8:  RLCF   01,F
+01BA:  DECFSZ 4F,F
+01BC:  BRA    01AC
+01BE:  RETURN 0
+01C0:  MOVLW  20
+01C2:  BTFSS  48.4
+01C4:  MOVLW  30
+01C6:  MOVWF  49
+01C8:  MOVFF  47,00
+01CC:  BTFSS  47.7
+01CE:  BRA    01E0
+01D0:  COMF   00,F
+01D2:  INCF   00,F
+01D4:  MOVFF  00,47
+01D8:  MOVLW  2D
+01DA:  MOVWF  49
+01DC:  BSF    48.7
+01DE:  BSF    48.0
+01E0:  MOVF   01,W
+01E2:  MOVFF  47,4D
+01E6:  MOVLW  64
+01E8:  MOVWF  4E
+01EA:  RCALL  0198
+01EC:  MOVFF  00,47
+01F0:  MOVLW  30
+01F2:  ADDWF  01,W
+01F4:  MOVWF  4A
+01F6:  MOVFF  47,4D
+01FA:  MOVLW  0A
+01FC:  MOVWF  4E
+01FE:  RCALL  0198
+0200:  MOVLW  30
+0202:  ADDWF  00,W
+0204:  MOVWF  4C
+0206:  MOVLW  30
+0208:  ADDWF  01,W
+020A:  MOVWF  4B
+020C:  MOVFF  49,00
+0210:  MOVLW  30
+0212:  SUBWF  4A,W
+0214:  BZ    021E
+0216:  BSF    48.1
+0218:  BTFSC  48.7
+021A:  BSF    48.2
+021C:  BRA    0242
+021E:  MOVFF  49,4A
+0222:  MOVLW  20
+0224:  MOVWF  49
+0226:  MOVLW  30
+0228:  SUBWF  4B,W
+022A:  BZ    0234
+022C:  BSF    48.0
+022E:  BTFSC  48.7
+0230:  BSF    48.1
+0232:  BRA    0242
+0234:  BTFSS  FD8.2
+0236:  BSF    48.0
+0238:  BNZ   0242
+023A:  MOVFF  4A,4B
+023E:  MOVLW  20
+0240:  MOVWF  4A
+0242:  BTFSC  48.2
+0244:  BRA    0250
+0246:  BTFSC  48.1
+0248:  BRA    0258
+024A:  BTFSC  48.0
+024C:  BRA    0260
+024E:  BRA    0268
+0250:  MOVF   49,W
+0252:  BTFSS  F9E.4
+0254:  BRA    0252
+0256:  MOVWF  FAD
+0258:  MOVF   4A,W
+025A:  BTFSS  F9E.4
+025C:  BRA    025A
+025E:  MOVWF  FAD
+0260:  MOVF   4B,W
+0262:  BTFSS  F9E.4
+0264:  BRA    0262
+0266:  MOVWF  FAD
+0268:  MOVF   4C,W
+026A:  BTFSS  F9E.4
+026C:  BRA    026A
+026E:  MOVWF  FAD
+0270:  GOTO   0350 (RETURN)
+0274:  BTFSC  48.7
+0276:  BRA    0298
+0278:  MOVLW  0F
+027A:  MOVWF  00
+027C:  SWAPF  47,W
+027E:  ANDWF  00,F
+0280:  MOVLW  0A
+0282:  SUBWF  00,W
+0284:  BC    028C
+0286:  MOVLW  30
+0288:  ADDWF  00,F
+028A:  BRA    0290
+028C:  MOVF   48,W
+028E:  ADDWF  00,F
+0290:  MOVF   00,W
+0292:  BTFSS  F9E.4
+0294:  BRA    0292
+0296:  MOVWF  FAD
+0298:  MOVLW  0F
+029A:  ANDWF  47,F
+029C:  MOVLW  0A
+029E:  SUBWF  47,W
+02A0:  BC    02A6
+02A2:  MOVLW  30
+02A4:  BRA    02AA
+02A6:  BCF    48.7
+02A8:  MOVF   48,W
+02AA:  ADDWF  47,F
+02AC:  MOVF   47,W
+02AE:  BTFSS  F9E.4
+02B0:  BRA    02AE
+02B2:  MOVWF  FAD
+02B4:  GOTO   0378 (RETURN)
+....................  
+.................... #list 
+....................  
+.................... #device adc=16 
+....................  
+.................... #FUSES NOWDT                     //No Watch Dog Timer 
+.................... #FUSES WDT128                    //Watch Dog Timer uses 1:128 Postscale 
+.................... #FUSES H4                        //High speed osc with HW enabled 4X PLL 
+.................... #FUSES NOBROWNOUT                //No brownout reset 
+.................... #FUSES LVP                       //Low voltage prgming 
+.................... #FUSES NOXINST                   //Extended mode disabled (Legacy mode) 
+....................  
+.................... #use delay(clock=40000000) 
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8) 
+*
+0170:  BTFSS  F9E.4
+0172:  BRA    0170
+0174:  MOVWF  FAD
+0176:  RETURN 0
+....................  
+....................  
+.................... void main() 
+*
+02B8:  CLRF   FF8
+02BA:  BCF    FD0.7
+02BC:  BSF    FB8.3
+02BE:  MOVLW  11
+02C0:  MOVWF  FAF
+02C2:  MOVLW  04
+02C4:  MOVWF  FB0
+02C6:  MOVLW  A6
+02C8:  MOVWF  FAC
+02CA:  MOVLW  90
+02CC:  MOVWF  FAB
+02CE:  NOP   
+02D0:  NOP   
+02D2:  MOVF   FC1,W
+02D4:  ANDLW  C0
+02D6:  IORLW  0F
+02D8:  MOVWF  FC1
+02DA:  MOVLW  07
+02DC:  MOVWF  FB4
+02DE:  MOVLW  55
+02E0:  MOVWF  05
+.................... { 
+....................     int value = 85; 
+....................     char ch; 
+....................     char string[64]; 
+....................      
+....................     puts("**********************************"); 
+02E2:  MOVLW  04
+02E4:  MOVWF  FF6
+02E6:  MOVLW  00
+02E8:  MOVWF  FF7
+02EA:  RCALL  014E
+02EC:  MOVLW  0D
+02EE:  BTFSS  F9E.4
+02F0:  BRA    02EE
+02F2:  MOVWF  FAD
+02F4:  MOVLW  0A
+02F6:  BTFSS  F9E.4
+02F8:  BRA    02F6
+02FA:  MOVWF  FAD
+....................     puts("  RS232 demo with CCS C compiler  "); 
+02FC:  MOVLW  28
+02FE:  MOVWF  FF6
+0300:  MOVLW  00
+0302:  MOVWF  FF7
+0304:  RCALL  014E
+0306:  MOVLW  0D
+0308:  BTFSS  F9E.4
+030A:  BRA    0308
+030C:  MOVWF  FAD
+030E:  MOVLW  0A
+0310:  BTFSS  F9E.4
+0312:  BRA    0310
+0314:  MOVWF  FAD
+....................     puts("**********************************"); 
+0316:  MOVLW  4C
+0318:  MOVWF  FF6
+031A:  MOVLW  00
+031C:  MOVWF  FF7
+031E:  RCALL  014E
+0320:  MOVLW  0D
+0322:  BTFSS  F9E.4
+0324:  BRA    0322
+0326:  MOVWF  FAD
+0328:  MOVLW  0A
+032A:  BTFSS  F9E.4
+032C:  BRA    032A
+032E:  MOVWF  FAD
+....................      
+....................     /* start a new line (CR + LF) */ 
+....................     putc('\n'); 
+0330:  MOVLW  0A
+0332:  RCALL  0170
+....................     putc('\r'); 
+0334:  MOVLW  0D
+0336:  RCALL  0170
+....................      
+....................     /* output variable in decimal format */ 
+....................     printf("Decimal variable output: %d\n\r", value); 
+0338:  MOVLW  70
+033A:  MOVWF  FF6
+033C:  MOVLW  00
+033E:  MOVWF  FF7
+0340:  MOVLW  19
+0342:  MOVWF  47
+0344:  RCALL  0178
+0346:  MOVFF  05,47
+034A:  MOVLW  18
+034C:  MOVWF  48
+034E:  BRA    01C0
+0350:  MOVLW  0A
+0352:  BTFSS  F9E.4
+0354:  BRA    0352
+0356:  MOVWF  FAD
+0358:  MOVLW  0D
+035A:  BTFSS  F9E.4
+035C:  BRA    035A
+035E:  MOVWF  FAD
+....................  
+....................     /* output variable in hex format */ 
+....................     printf("Hex variable output: %x\n\r", value); 
+0360:  MOVLW  8E
+0362:  MOVWF  FF6
+0364:  MOVLW  00
+0366:  MOVWF  FF7
+0368:  MOVLW  15
+036A:  MOVWF  47
+036C:  RCALL  0178
+036E:  MOVFF  05,47
+0372:  MOVLW  57
+0374:  MOVWF  48
+0376:  BRA    0274
+0378:  MOVLW  0A
+037A:  BTFSS  F9E.4
+037C:  BRA    037A
+037E:  MOVWF  FAD
+0380:  MOVLW  0D
+0382:  BTFSS  F9E.4
+0384:  BRA    0382
+0386:  MOVWF  FAD
+....................  
+....................  
+....................     /* echo demo: PIC receives data and sends it back. */ 
+....................     /*            If ENTER key is received, this demo exits. */ 
+....................     puts("Type on the keyboard, PIC will echo back the characters:"); 
+0388:  MOVLW  A8
+038A:  MOVWF  FF6
+038C:  MOVLW  00
+038E:  MOVWF  FF7
+0390:  RCALL  014E
+0392:  MOVLW  0D
+0394:  BTFSS  F9E.4
+0396:  BRA    0394
+0398:  MOVWF  FAD
+039A:  MOVLW  0A
+039C:  BTFSS  F9E.4
+039E:  BRA    039C
+03A0:  MOVWF  FAD
+....................  
+....................     while (1) 
+....................     { 
+....................     puts("**********************************"); 
+03A2:  MOVLW  E2
+03A4:  MOVWF  FF6
+03A6:  MOVLW  00
+03A8:  MOVWF  FF7
+03AA:  RCALL  014E
+03AC:  MOVLW  0D
+03AE:  BTFSS  F9E.4
+03B0:  BRA    03AE
+03B2:  MOVWF  FAD
+03B4:  MOVLW  0A
+03B6:  BTFSS  F9E.4
+03B8:  BRA    03B6
+03BA:  MOVWF  FAD
+....................     puts("  RS232 demo with CCS C compiler  "); 
+03BC:  MOVLW  06
+03BE:  MOVWF  FF6
+03C0:  MOVLW  01
+03C2:  MOVWF  FF7
+03C4:  RCALL  014E
+03C6:  MOVLW  0D
+03C8:  BTFSS  F9E.4
+03CA:  BRA    03C8
+03CC:  MOVWF  FAD
+03CE:  MOVLW  0A
+03D0:  BTFSS  F9E.4
+03D2:  BRA    03D0
+03D4:  MOVWF  FAD
+....................     puts("**********************************"); 
+03D6:  MOVLW  2A
+03D8:  MOVWF  FF6
+03DA:  MOVLW  01
+03DC:  MOVWF  FF7
+03DE:  RCALL  014E
+03E0:  MOVLW  0D
+03E2:  BTFSS  F9E.4
+03E4:  BRA    03E2
+03E6:  MOVWF  FAD
+03E8:  MOVLW  0A
+03EA:  BTFSS  F9E.4
+03EC:  BRA    03EA
+03EE:  MOVWF  FAD
+....................      
+....................     /* start a new line (CR + LF) */ 
+....................     putc('\n'); 
+03F0:  MOVLW  0A
+03F2:  RCALL  0170
+....................     putc('\r'); 
+03F4:  MOVLW  0D
+03F6:  RCALL  0170
+03F8:  BRA    03A2
+....................     } 
+.................... } 
+03FA:  SLEEP 
+
+Configuration Fuses:
+   Word  1: C600   H4 FCMEN IESO
+   Word  2: 0E18   PUT NOBROWNOUT BORV21 NOWDT WDT128
+   Word  3: 8700   CCP2C1 PBADEN LPT1OSC MCLR
+   Word  4: 0085   STVREN LVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

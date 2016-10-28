@@ -1,0 +1,490 @@
+CCS PCH C Compiler, Version 5.005, 10097               21-oct-16 16:26
+
+               Filename:   C:\Users\Milton\MPLABXProjects\serialBlink.X\build\default\production\main.lst
+
+               ROM used:   842 bytes (3%)
+                           Largest free fragment is 31926
+               RAM used:   8 (1%) at main() level
+                           16 (1%) worst case
+               Stack used: 0 locations
+               Stack size: 31
+
+*
+0000:  GOTO   01EE
+....................  
+.................... /*  
+....................  * File:   main.c 
+....................  * Author: Milton 
+....................  * 
+....................  * Created on 11 de octubre de 2016, 09:55 AM 
+....................  */ 
+.................... #include <18f2520.h> 
+.................... //////// Standard Header file for the PIC18F2520 device //////////////// 
+.................... #device PIC18F2520 
+0004:  DATA 2A,2A
+0006:  DATA 2A,2A
+0008:  DATA 2A,2A
+000A:  DATA 2A,2A
+000C:  DATA 2A,2A
+000E:  DATA 2A,2A
+0010:  DATA 2A,2A
+0012:  DATA 2A,2A
+0014:  DATA 2A,2A
+0016:  DATA 2A,2A
+0018:  DATA 2A,2A
+001A:  DATA 2A,2A
+001C:  DATA 2A,2A
+001E:  DATA 2A,2A
+0020:  DATA 2A,2A
+0022:  DATA 2A,2A
+0024:  DATA 2A,2A
+0026:  DATA 00,00
+0028:  DATA 20,20
+002A:  DATA 52,53
+002C:  DATA 32,33
+002E:  DATA 32,20
+0030:  DATA 64,65
+0032:  DATA 6D,6F
+0034:  DATA 20,77
+0036:  DATA 69,74
+0038:  DATA 68,20
+003A:  DATA 43,43
+003C:  DATA 53,20
+003E:  DATA 43,20
+0040:  DATA 63,6F
+0042:  DATA 6D,70
+0044:  DATA 69,6C
+0046:  DATA 65,72
+0048:  DATA 20,20
+004A:  DATA 00,00
+004C:  DATA 2A,2A
+004E:  DATA 2A,2A
+0050:  DATA 2A,2A
+0052:  DATA 2A,2A
+0054:  DATA 2A,2A
+0056:  DATA 2A,2A
+0058:  DATA 2A,2A
+005A:  DATA 2A,2A
+005C:  DATA 2A,2A
+005E:  DATA 2A,2A
+0060:  DATA 2A,2A
+0062:  DATA 2A,2A
+0064:  DATA 2A,2A
+0066:  DATA 2A,2A
+0068:  DATA 2A,2A
+006A:  DATA 2A,2A
+006C:  DATA 2A,2A
+006E:  DATA 0A,0D
+0070:  DATA 00,00
+0072:  DATA 44,65
+0074:  DATA 63,69
+0076:  DATA 6D,61
+0078:  DATA 6C,20
+007A:  DATA 76,61
+007C:  DATA 72,69
+007E:  DATA 61,62
+0080:  DATA 6C,65
+0082:  DATA 20,6F
+0084:  DATA 75,74
+0086:  DATA 70,75
+0088:  DATA 74,3A
+008A:  DATA 20,25
+008C:  DATA 64,0A
+008E:  DATA 0D,00
+0090:  DATA 45,6E
+0092:  DATA 74,72
+0094:  DATA 65,20
+0096:  DATA 61,6C
+0098:  DATA 20,66
+009A:  DATA 6F,72
+009C:  DATA 3A,20
+009E:  DATA 25,64
+00A0:  DATA 20,0A
+00A2:  DATA 0D,00
+*
+00CA:  TBLRD*+
+00CC:  MOVF   FF5,F
+00CE:  BZ    00EA
+00D0:  MOVFF  FF6,08
+00D4:  MOVFF  FF7,09
+00D8:  MOVF   FF5,W
+00DA:  BTFSS  F9E.4
+00DC:  BRA    00DA
+00DE:  MOVWF  FAD
+00E0:  MOVFF  08,FF6
+00E4:  MOVFF  09,FF7
+00E8:  BRA    00CA
+00EA:  RETURN 0
+00EC:  TBLRD*+
+00EE:  MOVFF  FF6,09
+00F2:  MOVFF  FF7,0A
+00F6:  MOVF   FF5,W
+00F8:  BTFSS  F9E.4
+00FA:  BRA    00F8
+00FC:  MOVWF  FAD
+00FE:  MOVFF  09,FF6
+0102:  MOVFF  0A,FF7
+0106:  DECFSZ 08,F
+0108:  BRA    00EC
+010A:  RETURN 0
+010C:  MOVF   0F,W
+010E:  CLRF   01
+0110:  SUBWF  0E,W
+0112:  BC    011A
+0114:  MOVFF  0E,00
+0118:  BRA    0132
+011A:  CLRF   00
+011C:  MOVLW  08
+011E:  MOVWF  10
+0120:  RLCF   0E,F
+0122:  RLCF   00,F
+0124:  MOVF   0F,W
+0126:  SUBWF  00,W
+0128:  BTFSC  FD8.0
+012A:  MOVWF  00
+012C:  RLCF   01,F
+012E:  DECFSZ 10,F
+0130:  BRA    0120
+0132:  RETURN 0
+0134:  MOVLW  20
+0136:  BTFSS  09.4
+0138:  MOVLW  30
+013A:  MOVWF  0A
+013C:  MOVFF  08,00
+0140:  BTFSS  08.7
+0142:  BRA    0154
+0144:  COMF   00,F
+0146:  INCF   00,F
+0148:  MOVFF  00,08
+014C:  MOVLW  2D
+014E:  MOVWF  0A
+0150:  BSF    09.7
+0152:  BSF    09.0
+0154:  MOVF   01,W
+0156:  MOVFF  08,0E
+015A:  MOVLW  64
+015C:  MOVWF  0F
+015E:  RCALL  010C
+0160:  MOVFF  00,08
+0164:  MOVLW  30
+0166:  ADDWF  01,W
+0168:  MOVWF  0B
+016A:  MOVFF  08,0E
+016E:  MOVLW  0A
+0170:  MOVWF  0F
+0172:  RCALL  010C
+0174:  MOVLW  30
+0176:  ADDWF  00,W
+0178:  MOVWF  0D
+017A:  MOVLW  30
+017C:  ADDWF  01,W
+017E:  MOVWF  0C
+0180:  MOVFF  0A,00
+0184:  MOVLW  30
+0186:  SUBWF  0B,W
+0188:  BZ    0192
+018A:  BSF    09.1
+018C:  BTFSC  09.7
+018E:  BSF    09.2
+0190:  BRA    01B6
+0192:  MOVFF  0A,0B
+0196:  MOVLW  20
+0198:  MOVWF  0A
+019A:  MOVLW  30
+019C:  SUBWF  0C,W
+019E:  BZ    01A8
+01A0:  BSF    09.0
+01A2:  BTFSC  09.7
+01A4:  BSF    09.1
+01A6:  BRA    01B6
+01A8:  BTFSS  FD8.2
+01AA:  BSF    09.0
+01AC:  BNZ   01B6
+01AE:  MOVFF  0B,0C
+01B2:  MOVLW  20
+01B4:  MOVWF  0B
+01B6:  BTFSC  09.2
+01B8:  BRA    01C4
+01BA:  BTFSC  09.1
+01BC:  BRA    01CC
+01BE:  BTFSC  09.0
+01C0:  BRA    01D4
+01C2:  BRA    01DC
+01C4:  MOVF   0A,W
+01C6:  BTFSS  F9E.4
+01C8:  BRA    01C6
+01CA:  MOVWF  FAD
+01CC:  MOVF   0B,W
+01CE:  BTFSS  F9E.4
+01D0:  BRA    01CE
+01D2:  MOVWF  FAD
+01D4:  MOVF   0C,W
+01D6:  BTFSS  F9E.4
+01D8:  BRA    01D6
+01DA:  MOVWF  FAD
+01DC:  MOVF   0D,W
+01DE:  BTFSS  F9E.4
+01E0:  BRA    01DE
+01E2:  MOVWF  FAD
+01E4:  RETURN 0
+....................  
+.................... #list 
+....................  
+.................... #fuses hs,nowdt,noprotect,noput 
+.................... #use delay (clock=20M) 
+*
+00A4:  CLRF   FEA
+00A6:  MOVLW  09
+00A8:  MOVWF  FE9
+00AA:  MOVF   FEF,W
+00AC:  BZ    00C8
+00AE:  MOVLW  06
+00B0:  MOVWF  01
+00B2:  CLRF   00
+00B4:  DECFSZ 00,F
+00B6:  BRA    00B4
+00B8:  DECFSZ 01,F
+00BA:  BRA    00B2
+00BC:  MOVLW  7B
+00BE:  MOVWF  00
+00C0:  DECFSZ 00,F
+00C2:  BRA    00C0
+00C4:  DECFSZ FEF,F
+00C6:  BRA    00AE
+00C8:  RETURN 0
+....................  
+....................  
+.................... #use rs232(baud=9600,xmit=PIN_C6,rcv=PIN_C7) 
+*
+01E6:  BTFSS  F9E.4
+01E8:  BRA    01E6
+01EA:  MOVWF  FAD
+01EC:  RETURN 0
+....................  
+.................... void main(void) 
+01EE:  CLRF   FF8
+01F0:  BCF    FD0.7
+01F2:  BSF    FB8.3
+01F4:  MOVLW  08
+01F6:  MOVWF  FAF
+01F8:  MOVLW  02
+01FA:  MOVWF  FB0
+01FC:  MOVLW  A6
+01FE:  MOVWF  FAC
+0200:  MOVLW  90
+0202:  MOVWF  FAB
+0204:  NOP   
+0206:  NOP   
+0208:  MOVF   FC1,W
+020A:  ANDLW  C0
+020C:  IORLW  0F
+020E:  MOVWF  FC1
+0210:  MOVLW  07
+0212:  MOVWF  FB4
+0214:  MOVLW  55
+0216:  MOVWF  05
+0218:  CLRF   06
+....................  { 
+....................      
+....................         int value = 85,i=0; 
+....................     char ch; 
+....................      
+....................    setup_adc(ADC_OFF);            // Built-in A/D setup function 
+021A:  BCF    FC2.0
+....................     while(TRUE) {        
+....................  
+....................             output_high(PIN_C1); 
+021C:  BCF    F94.1
+021E:  BSF    F8B.1
+....................         output_low(PIN_B5); 
+0220:  BCF    F93.5
+0222:  BCF    F8A.5
+....................         //output_low(PIN_A2); 
+....................         delay_ms(500); 
+0224:  MOVLW  02
+0226:  MOVWF  08
+0228:  MOVLW  FA
+022A:  MOVWF  09
+022C:  RCALL  00A4
+022E:  DECFSZ 08,F
+0230:  BRA    0228
+....................     puts("**********************************"); 
+0232:  MOVLW  04
+0234:  MOVWF  FF6
+0236:  MOVLW  00
+0238:  MOVWF  FF7
+023A:  RCALL  00CA
+023C:  MOVLW  0D
+023E:  BTFSS  F9E.4
+0240:  BRA    023E
+0242:  MOVWF  FAD
+0244:  MOVLW  0A
+0246:  BTFSS  F9E.4
+0248:  BRA    0246
+024A:  MOVWF  FAD
+....................     puts("  RS232 demo with CCS C compiler  "); 
+024C:  MOVLW  28
+024E:  MOVWF  FF6
+0250:  MOVLW  00
+0252:  MOVWF  FF7
+0254:  RCALL  00CA
+0256:  MOVLW  0D
+0258:  BTFSS  F9E.4
+025A:  BRA    0258
+025C:  MOVWF  FAD
+025E:  MOVLW  0A
+0260:  BTFSS  F9E.4
+0262:  BRA    0260
+0264:  MOVWF  FAD
+....................     puts("**********************************\n\r"); 
+0266:  MOVLW  4C
+0268:  MOVWF  FF6
+026A:  MOVLW  00
+026C:  MOVWF  FF7
+026E:  RCALL  00CA
+0270:  MOVLW  0D
+0272:  BTFSS  F9E.4
+0274:  BRA    0272
+0276:  MOVWF  FAD
+0278:  MOVLW  0A
+027A:  BTFSS  F9E.4
+027C:  BRA    027A
+027E:  MOVWF  FAD
+....................      
+....................         /* output variable in decimal format */ 
+....................     printf("Decimal variable output: %d\n\r", value); 
+0280:  MOVLW  72
+0282:  MOVWF  FF6
+0284:  MOVLW  00
+0286:  MOVWF  FF7
+0288:  MOVLW  19
+028A:  MOVWF  08
+028C:  RCALL  00EC
+028E:  MOVFF  05,08
+0292:  MOVLW  18
+0294:  MOVWF  09
+0296:  RCALL  0134
+0298:  MOVLW  0A
+029A:  BTFSS  F9E.4
+029C:  BRA    029A
+029E:  MOVWF  FAD
+02A0:  MOVLW  0D
+02A2:  BTFSS  F9E.4
+02A4:  BRA    02A2
+02A6:  MOVWF  FAD
+....................     printf("\n\r"); 
+02A8:  MOVLW  0A
+02AA:  BTFSS  F9E.4
+02AC:  BRA    02AA
+02AE:  MOVWF  FAD
+02B0:  MOVLW  0D
+02B2:  BTFSS  F9E.4
+02B4:  BRA    02B2
+02B6:  MOVWF  FAD
+....................  
+....................     /* output variable in hex format */ 
+....................                 /* read a single character */ 
+....................       output_low(PIN_C1);    
+02B8:  BCF    F94.1
+02BA:  BCF    F8B.1
+....................       ch = getc(); 
+02BC:  BTFSS  F9E.5
+02BE:  BRA    02BC
+02C0:  MOVFF  FAE,07
+....................       output_high(PIN_C1); 
+02C4:  BCF    F94.1
+02C6:  BSF    F8B.1
+....................       output_high(PIN_B5); 
+02C8:  BCF    F93.5
+02CA:  BSF    F8A.5
+....................       delay_ms(1000); 
+02CC:  MOVLW  04
+02CE:  MOVWF  08
+02D0:  MOVLW  FA
+02D2:  MOVWF  09
+02D4:  RCALL  00A4
+02D6:  DECFSZ 08,F
+02D8:  BRA    02D0
+....................         /* echo back the received character */ 
+....................       if(ch == 'e') 
+02DA:  MOVF   07,W
+02DC:  SUBLW  65
+02DE:  BNZ   0330
+....................       { 
+....................         for(i=0; i<=5; i++)          { 
+02E0:  CLRF   06
+02E2:  MOVF   06,W
+02E4:  SUBLW  05
+02E6:  BNC   0330
+....................                 output_high(PIN_A2); 
+02E8:  BCF    F92.2
+02EA:  BSF    F89.2
+....................                 output_high(PIN_A3); 
+02EC:  BCF    F92.3
+02EE:  BSF    F89.3
+....................                 delay_ms(500); 
+02F0:  MOVLW  02
+02F2:  MOVWF  08
+02F4:  MOVLW  FA
+02F6:  MOVWF  09
+02F8:  RCALL  00A4
+02FA:  DECFSZ 08,F
+02FC:  BRA    02F4
+....................                 output_low(PIN_A2); 
+02FE:  BCF    F92.2
+0300:  BCF    F89.2
+....................                 output_low(PIN_A3); 
+0302:  BCF    F92.3
+0304:  BCF    F89.3
+....................                 printf("Entre al for: %d \n\r",i); 
+0306:  MOVLW  90
+0308:  MOVWF  FF6
+030A:  MOVLW  00
+030C:  MOVWF  FF7
+030E:  MOVLW  0E
+0310:  MOVWF  08
+0312:  RCALL  00EC
+0314:  MOVFF  06,08
+0318:  MOVLW  18
+031A:  MOVWF  09
+031C:  RCALL  0134
+031E:  MOVLW  A0
+0320:  MOVWF  FF6
+0322:  MOVLW  00
+0324:  MOVWF  FF7
+0326:  MOVLW  03
+0328:  MOVWF  08
+032A:  RCALL  00EC
+032C:  INCF   06,F
+032E:  BRA    02E2
+....................           } 
+....................        
+....................       } 
+....................            putc('\n'); 
+0330:  MOVLW  0A
+0332:  RCALL  01E6
+....................     putc('\r'); 
+0334:  MOVLW  0D
+0336:  RCALL  01E6
+....................         //output_high(PIN_A2); 
+....................         delay_ms(500); 
+0338:  MOVLW  02
+033A:  MOVWF  08
+033C:  MOVLW  FA
+033E:  MOVWF  09
+0340:  RCALL  00A4
+0342:  DECFSZ 08,F
+0344:  BRA    033C
+0346:  BRA    021C
+....................     } 
+.................... } 
+0348:  SLEEP 
+
+Configuration Fuses:
+   Word  1: C200   HS FCMEN IESO
+   Word  2: 1E1F   NOPUT BROWNOUT BORV21 NOWDT WDT32768
+   Word  3: 8700   CCP2C1 PBADEN LPT1OSC MCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

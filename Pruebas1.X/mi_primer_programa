@@ -1,0 +1,55 @@
+/* 
+ * File:   main.c
+ * Author: Milton
+ *
+ * Created on 17 de agosto de 2016, 12:41 PM
+ */
+
+
+//*********************************/
+#include <18f2520.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#use delay (clock=200000)
+#fuses HS,NOWDT,NOPROTECT,NOLVP,MCLR,NODEBUG
+void Read9356(long address, int data);
+
+/* 
+The #use SPI configures the SPI port. Here is a simple configuration: 
+*/ 
+#use SPI( 
+   DO = PIN_B0, 
+   DI = PIN_B1, 
+   CLK = PIN_B2, 
+   baud = 100000, 
+   BITS = 8, 
+   LSB_FIRST, 
+   SAMPLE_RISE, 
+   stream = SPI_PORT0 
+) 
+
+void main(){
+    while(1){
+    //TRISB = 0x20;
+    //set_tris_b(0x20);
+    output_low(pin_b5);
+    delay_ms(50);
+    output_high(pin_b5);
+    delay_ms(100);
+
+    }
+//    PORTB = 0x20; //Se escribe uno a dicho pin5
+}
+   
+   /* 
+Read a byte of data to a 9356 external EEPROM using this new SPI stream 
+*/ 
+void Read9356(long address, int data) 
+{ 
+   output_high(EEPROM_9356_SELECT); 
+   SPI_XFER(SPI_PORT0, 0x18); 
+   SPI_XFER(SPI_PORT0, address); 
+   data=SPI_XFER(SPI_PORT0, 0); 
+   output_low(EEPROM_9356_SELECT); 
+}

@@ -1,0 +1,117 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-005 strtok.save
+006-009 _Randseed
+00A-00B CYCLES
+00C-01F main.cadena1
+00C-00D send_pulses.cycles
+030-031 main.num
+032     @PSTRINGCN_9600_31766_31767.P1
+032-033 atoi.s
+032     @PRINTF_X_9600_31766_31767.P1
+032     main.@SCRATCH1
+032     @PSTRINGC_9600_31766_31767.@SCRATCH1
+032     @PSTRINGR_9600_31766_31767.@SCRATCH1
+033     @PRINTF_X_9600_31766_31767.P1
+033     @delay_ms1.P2
+033     @PSTRINGCN_9600_31766_31767.@SCRATCH1
+033     @PSTRINGC_9600_31766_31767.@SCRATCH2
+033     @PSTRINGR_9600_31766_31767.@SCRATCH2
+034-035 atoi.result
+034     @PSTRINGCN_9600_31766_31767.@SCRATCH2
+036-037 atoi.sign
+038-039 atoi.base
+03A-03B atoi.index
+03C     atoi.c
+03D-03E @MULS1616.P1
+03D     atoi.@SCRATCH1
+03E     atoi.@SCRATCH2
+03F-040 @MULS1616.P1
+03F     atoi.@SCRATCH3
+041     @MULS1616.@SCRATCH1
+042     @MULS1616.@SCRATCH2
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const894.call
+00001E  @const900.call
+000048  @const901.call
+000052  @const902.call
+000058  @const904.call
+00005E  @const905.call
+000082  @const908.call
+0000A4  @const909.call
+0000BE  @const910.call
+0000E0  @const911.call
+0000FA  @const912.call
+00011C  @const913.call
+00013A  @const914.call
+00016E  @PSTRINGCN_9600_31766_31767
+00018E  @PRINTF_X_9600_31766_31767
+0001D2  @PSTRINGC_9600_31766_31767
+0001F4  @PSTRINGR_9600_31766_31767
+00021C  @MULS1616
+00026E  atoi
+0004B8  @delay_ms1
+0004E0  main
+0004E0  @cinit1
+00053A  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    C:\Users\Milton\MPLABXProjects\comunicacionSerial.X\
+
+Project Files:
+    main.c                                                  [19-oct-16 11:01  CRC=C9A5CBC8]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F2520.H  [28-may-13 12:10  CRC=5C326614]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h   [08-jun-11 14:39  CRC=0B6669CF]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h   [16-jul-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h   [14-jul-11 10:13  CRC=23EDEC8F]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h    [03-ene-08 13:55  CRC=2D1F019F]
+
+Source signature=38E777E4
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2520
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 8,16,32
+    Float,Double:   32,32
+    Case Sensitive: Yes
+    Predefined symbols:
+       #define __18F2520 1
+
+Output Files:
+    XREF file:   build\default\production\main.xsym
+    Errors:      build\default\production\main.err
+    Ext Symbols: build\default\production\main.esym
+    INHX32:      build\default\production\main.hex
+    Symbols:     build\default\production\main.sym
+    List:        build\default\production\main.lst
+    Debug/COFF:  build\default\production\main.cof
+    Project:     main.ccspjt
+    Call Tree:   build\default\production\main.tre
+    Statistics:  build\default\production\main.STA

@@ -1,0 +1,6 @@
+C:\Users\Milton\MPLABXProjects\Pruebas1.X\main.c:42:15:  Error#12  Undefined identifier   PIN_D0
+C:\Users\Milton\MPLABXProjects\Pruebas1.X\main.c:44:16:  Error#12  Undefined identifier   PIN_D0
+C:\Users\Milton\MPLABXProjects\Pruebas1.X\main.c:48:15:  Error#12  Undefined identifier   PIN_D1
+C:\Users\Milton\MPLABXProjects\Pruebas1.X\main.c:50:16:  Error#12  Undefined identifier   PIN_D1
+      4 Errors,  0 Warnings.
+Build Failed.

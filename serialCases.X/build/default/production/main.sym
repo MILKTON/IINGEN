@@ -1,0 +1,87 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     rs232_errors
+017     isr_rs232.A_char
+018     isr_rs232.B_char
+019     isr_rs232.C_char
+01A     isr_rs232.D_char
+01B     isr_rs232.protocol
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000096  @GETCH_BIU_1
+0000AC  @PUTCHARI_BIU_1
+0000B4  isr_rs232
+00012A  MAIN
+00012A  @cinit1
+000154  @cinit2
+
+Project Directory:
+    C:\Users\Milton\MPLABXProjects\serialCases.X\
+
+Project Files:
+    main.c                                                  [21-oct-16 16:22  CRC=E2AB4C18]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18f2520.h  [28-may-13 12:10  CRC=5C326614]
+
+Source signature=9B101840
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2520
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __18F2520 1
+
+Output Files:
+    XREF file:   build\default\production\main.xsym
+    Errors:      build\default\production\main.err
+    Ext Symbols: build\default\production\main.esym
+    INHX32:      build\default\production\main.hex
+    Symbols:     build\default\production\main.sym
+    List:        build\default\production\main.lst
+    Debug/COFF:  build\default\production\main.cof
+    Project:     main.ccspjt
+    Call Tree:   build\default\production\main.tre
+    Statistics:  build\default\production\main.STA

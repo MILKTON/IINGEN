@@ -1,0 +1,126 @@
+CCS PCH C Compiler, Version 5.005, 10097               26-oct-16 16:42
+
+               Filename:   C:\Users\Milton\MPLABXProjects\spiNew.X\build\default\production\main.lst
+
+               ROM used:   116 bytes (0%)
+                           Largest free fragment is 32652
+               RAM used:   4 (0%) at main() level
+                           4 (0%) worst case
+               Stack used: 0 locations
+               Stack size: 31
+
+*
+0000:  GOTO   0004
+.................... /*  
+....................  * File:   main.c 
+....................  * Author: Milton 
+....................  * 
+....................  * Created on 13 de septiembre de 2016, 11:54 AM 
+....................  */ 
+....................  
+.................... /**/ 
+.................... #include <18f2520.h> 
+.................... //////// Standard Header file for the PIC18F2520 device //////////////// 
+.................... #device PIC18F2520 
+....................  
+.................... #list 
+....................  
+.................... #fuses hs,nowdt,noprotect,noput,nopbaden 
+.................... #use delay (clock=20M) 
+....................  
+.................... //#define DAC8562 PIN_B0 
+....................  
+.................... void main(){ 
+0004:  CLRF   FF8
+0006:  BCF    FD0.7
+0008:  MOVF   FC1,W
+000A:  ANDLW  C0
+000C:  IORLW  0F
+000E:  MOVWF  FC1
+0010:  MOVLW  07
+0012:  MOVWF  FB4
+....................      
+.................... /* PROGRAMA SPI*/ 
+.................... setup_spi(SPI_MASTER | SPI_H_TO_L | SPI_CLK_DIV_16);  //Inicializar variables SPI_CLK_DIV_4 
+0014:  BCF    FC6.5
+0016:  BCF    F94.5
+0018:  BSF    F94.4
+001A:  BCF    F94.3
+001C:  MOVLW  31
+001E:  MOVWF  FC6
+0020:  MOVLW  40
+0022:  MOVWF  FC7
+.................... set_tris_b(0b00000000); //1 in -- 0 out 
+0024:  MOVLW  00
+0026:  MOVWF  F93
+.................... setup_adc(ADC_OFF);            // Built-in A/D setup function 
+0028:  BCF    FC2.0
+....................  while(1) 
+....................     
+....................  {      
+....................       
+....................     //  DB23        -->                                                    DB0 
+....................     //  23 22 | 21 20 19 | 18 17 16 | 15 14 13 12 11 10 9 8 | 7 6 5 4 3 2 1 0  
+....................     //  X  X  | C2 C1 C0 | A2 A1 A0 |   D A T A    D A T A        D A T A 
+....................       
+....................     output_high(PIN_B0); //SYNC=1 para deshabilitar registro 
+002A:  BCF    F93.0
+002C:  BSF    F8A.0
+....................     output_low(PIN_B2);//LDAC 
+002E:  BCF    F93.2
+0030:  BCF    F8A.2
+....................     output_high(PIN_B1);//CLR 
+0032:  BCF    F93.1
+0034:  BSF    F8A.1
+....................     output_low(PIN_B0);  //SYNC=0 para habilitar registro 
+0036:  BCF    F93.0
+0038:  BCF    F8A.0
+....................     delay_us(5); 
+003A:  MOVLW  07
+003C:  MOVWF  00
+003E:  DECFSZ 00,F
+0040:  BRA    003E
+0042:  BRA    0044
+0044:  NOP   
+....................     spi_write(0b00000111);  // Manda modo 000 DACA  001 DACB 
+0046:  MOVF   FC9,W
+0048:  MOVLW  07
+004A:  MOVWF  FC9
+004C:  RRCF   FC7,W
+004E:  BNC   004C
+....................     spi_write(0x7F); 
+0050:  MOVF   FC9,W
+0052:  MOVLW  7F
+0054:  MOVWF  FC9
+0056:  RRCF   FC7,W
+0058:  BNC   0056
+....................     spi_write(0x80);     
+005A:  MOVF   FC9,W
+005C:  MOVLW  80
+005E:  MOVWF  FC9
+0060:  RRCF   FC7,W
+0062:  BNC   0060
+....................     output_high(PIN_B0); //SYNC=1 para deshabilitar registro        
+0064:  BCF    F93.0
+0066:  BSF    F8A.0
+....................     output_low(PIN_B2);//LDAC 
+0068:  BCF    F93.2
+006A:  BCF    F8A.2
+....................     output_high(PIN_B5); 
+006C:  BCF    F93.5
+006E:  BSF    F8A.5
+0070:  BRA    002A
+....................  
+....................     } 
+....................  
+....................  } 
+0072:  SLEEP 
+
+Configuration Fuses:
+   Word  1: C200   HS FCMEN IESO
+   Word  2: 1E1F   NOPUT BROWNOUT BORV21 NOWDT WDT32768
+   Word  3: 8500   CCP2C1 NOPBADEN LPT1OSC MCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

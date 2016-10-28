@@ -1,0 +1,39 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+C1OUT
+C2OUT
+
+Project Directory:
+    C:\Users\Milton\MPLABXProjects\spiNew.X\
+
+Project Files:
+    main.c                                                  [25-oct-16 10:17  CRC=DC243F36]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18f2520.h  [28-may-13 12:10  CRC=5C326614]
+
+Source signature=94890B5E
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2520
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Predefined symbols:
+       #define __18F2520 1
+
+Output Files:
+    XREF file:   build\default\production\main.xsym
+    Errors:      build\default\production\main.err
+    Ext Symbols: build\default\production\main.esym
+    Object:      build\default\production\main.o
+    Symbols:     build\default\production\main.osym

@@ -1,0 +1,90 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005     main.value
+006     main.i
+007     main.ch
+008     @PSTRINGCN_9600_31766_31767.P1
+008     @PRINTF_D_9600_31766_31767.P2
+008     main.@SCRATCH1
+008     @PSTRINGC_1.@SCRATCH1
+009     @delay_ms1.P1
+009     @PRINTF_D_9600_31766_31767.P2
+009     @PSTRINGC_1.@SCRATCH2
+009     @PSTRINGCN_9600_31766_31767.@SCRATCH1
+00A     @PSTRINGCN_9600_31766_31767.@SCRATCH2
+00A     @PRINTF_D_9600_31766_31767.@SCRATCH1
+00B     @PRINTF_D_9600_31766_31767.@SCRATCH2
+00C     @PRINTF_D_9600_31766_31767.@SCRATCH3
+00D     @PRINTF_D_9600_31766_31767.@SCRATCH4
+00E     @DIV88.P1
+00F     @DIV88.P1
+010     @DIV88.@SCRATCH1
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const631.call
+000028  @const633.call
+00004C  @const634.call
+000072  @const635.call
+000090  @const645.call
+0000A4  @delay_ms1
+0000CA  @PSTRINGC_1
+0000EC  @PSTRINGCN_9600_31766_31767
+00010C  @DIV88
+000134  @PRINTF_D_9600_31766_31767
+0001E6  @PUTCHARI_BIU_1
+0001EE  main
+0001EE  @cinit1
+000214  @cinit2
+
+Project Directory:
+    C:\Users\Milton\MPLABXProjects\serialBlink.X\
+
+Project Files:
+    main.c                                                  [21-oct-16 16:26  CRC=B62B6AAF]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18f2520.h  [28-may-13 12:10  CRC=5C326614]
+
+Source signature=6E9036D7
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2520
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __18F2520 1
+
+Output Files:
+    XREF file:   build\default\production\main.xsym
+    Errors:      build\default\production\main.err
+    Ext Symbols: build\default\production\main.esym
+    INHX32:      build\default\production\main.hex
+    Symbols:     build\default\production\main.sym
+    List:        build\default\production\main.lst
+    Debug/COFF:  build\default\production\main.cof
+    Project:     main.ccspjt
+    Call Tree:   build\default\production\main.tre
+    Statistics:  build\default\production\main.STA

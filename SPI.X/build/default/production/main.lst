@@ -1,0 +1,149 @@
+CCS PCH C Compiler, Version 5.005, 10097               25-oct-16 11:31
+
+               Filename:   C:\Users\Milton\MPLABXProjects\SPI.X\build\default\production\main.lst
+
+               ROM used:   124 bytes (0%)
+                           Largest free fragment is 32644
+               RAM used:   4 (0%) at main() level
+                           5 (0%) worst case
+               Stack used: 0 locations
+               Stack size: 31
+
+*
+0000:  GOTO   002C
+.................... /*  
+....................  * File:   main.c 
+....................  * Author: Milton 
+....................  * 
+....................  * Created on 13 de septiembre de 2016, 11:54 AM 
+....................  */ 
+....................  
+.................... /**/ 
+.................... /**/ 
+.................... #include <18f2520.h> 
+.................... //////// Standard Header file for the PIC18F2520 device //////////////// 
+.................... #device PIC18F2520 
+....................  
+.................... #list 
+....................  
+.................... #fuses hs,nowdt,noprotect,noput 
+.................... #use delay (clock=20M) 
+0004:  CLRF   FEA
+0006:  MOVLW  05
+0008:  MOVWF  FE9
+000A:  MOVF   FEF,W
+000C:  BZ    0028
+000E:  MOVLW  06
+0010:  MOVWF  01
+0012:  CLRF   00
+0014:  DECFSZ 00,F
+0016:  BRA    0014
+0018:  DECFSZ 01,F
+001A:  BRA    0012
+001C:  MOVLW  7B
+001E:  MOVWF  00
+0020:  DECFSZ 00,F
+0022:  BRA    0020
+0024:  DECFSZ FEF,F
+0026:  BRA    000E
+0028:  GOTO   0078 (RETURN)
+....................  
+....................  
+.................... void main(){ 
+002C:  CLRF   FF8
+002E:  BCF    FD0.7
+0030:  MOVF   FC1,W
+0032:  ANDLW  C0
+0034:  IORLW  0F
+0036:  MOVWF  FC1
+0038:  MOVLW  07
+003A:  MOVWF  FB4
+....................      
+....................     /* PROGRAMA SPI*/ 
+....................  setup_spi(SPI_MASTER | SPI_H_TO_L | SPI_CLK_DIV_16);  //Inicializar variables 
+003C:  BCF    FC6.5
+003E:  BCF    F94.5
+0040:  BSF    F94.4
+0042:  BCF    F94.3
+0044:  MOVLW  31
+0046:  MOVWF  FC6
+0048:  MOVLW  40
+004A:  MOVWF  FC7
+....................  while(1){ 
+....................  //spi_write(0x11);  // Manda modo 
+....................  output_low(PIN_B4); 
+004C:  BCF    F93.4
+004E:  BCF    F8A.4
+....................  SPI_WRITE(0x24); 
+0050:  MOVF   FC9,W
+0052:  MOVLW  24
+0054:  MOVWF  FC9
+0056:  RRCF   FC7,W
+0058:  BNC   0056
+....................  SPI_WRITE(0xF1); 
+005A:  MOVF   FC9,W
+005C:  MOVLW  F1
+005E:  MOVWF  FC9
+0060:  RRCF   FC7,W
+0062:  BNC   0060
+....................  SPI_WRITE(0x1F); 
+0064:  MOVF   FC9,W
+0066:  MOVLW  1F
+0068:  MOVWF  FC9
+006A:  RRCF   FC7,W
+006C:  BNC   006A
+....................  output_high(PIN_B4); 
+006E:  BCF    F93.4
+0070:  BSF    F8A.4
+....................  delay_us(1000);  
+0072:  MOVLW  01
+0074:  MOVWF  05
+0076:  BRA    0004
+0078:  BRA    004C
+....................  //spi_write(*((int8 *)(0) + 1));    // manda dato 
+....................  //spi_write(*((int8 *)(0) + 0));    // manda dato 
+....................  //output_high(PIN_B4); //SYNC=1 para deshabilitar registro 
+....................  } 
+....................  
+....................    } 
+....................  
+007A:  SLEEP 
+.................... /* 
+....................   
+....................  * SETUP_SPI(mode) 
+.................... Esta función inicializa el SPI; mode puede ser: 
+.................... oSPI_MASTER, SPI_SLAVE 
+.................... oSPI_L_TO_H, SPI_H_TO_L 
+.................... oSPI_CLK_DIV_4, SPI_CLK_DIV_16, 
+.................... oSPI_CLK_DIV_64, SPI_CLK_T2 
+.................... oSPI_SS_DISABLED 
+....................   
+....................   
+....................  */ 
+....................  
+.................... /* 
+....................  * #include <18f2520.h> 
+.................... #fuses hs,nowdt,noprotect,noput 
+.................... #use delay (clock=20M) 
+.................... #USE RS232(baud=9600,xmit=pin_c6,bits=8,parity=N) 
+.................... #use standard_io(c) 
+....................  
+.................... void main() 
+.................... { 
+....................    set_tris_b(0b11111111); 
+....................    while(true) 
+....................    { 
+....................          putc('1'); 
+....................        
+....................    } 
+.................... } 
+....................  * */ 
+
+Configuration Fuses:
+   Word  1: C200   HS FCMEN IESO
+   Word  2: 1E1F   NOPUT BROWNOUT BORV21 NOWDT WDT32768
+   Word  3: 8700   CCP2C1 PBADEN LPT1OSC MCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB
